@@ -7,7 +7,7 @@ a{
     color: black;
 }
 a:hover{
-    text-decoration: solid;
+    text-decoration: underline;
 }
 
 .portada {
