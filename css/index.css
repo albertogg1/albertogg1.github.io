@@ -8,6 +8,7 @@ a{
 }
 a:hover{
     text-decoration: underline;
+    text-decoration-thickness: 0.5px;
 }
 
 .portada {
@@ -22,13 +23,15 @@ a:hover{
 }
 
 .portada>h1 {
-    font-family: 'Raleway-Medium';
-    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 700;
     margin: 10px;
 }
 
 .portada>h2{
-    font-family: 'Raleway-Light';
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
+    font-weight: 200;
     margin: 8px;
 }
