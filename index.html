@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -10,29 +11,90 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Hojas de estilo personales -->
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/topnav.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body id="index">
-    <section class="portada">
+<body>
+    <div class="topnav">
+        <div id="logo">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </div>
+        <div class="topnav-parent">
+            <a href="#projects">
+                Proyectos
+            </a>
+            <svg height="20" width="2">
+                <line x1="0" y1="0" x2="0" y2="20" style="stroke: #EAEBED ;stroke-width:2" />
+            </svg>
+            <a href="#about">
+                Sobre mi
+            </a>
+            <svg height="20" width="2">
+                <line x1="0" y1="0" x2="0" y2="20" style="stroke: #EAEBED ;stroke-width:2" />
+            </svg>
+            <a href="#contact">
+                Contacto
+            </a>
+            <a href="#language" id="language">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <section id="portada">
         <h1>
+            Hola, soy <br>
             Alberto García
         </h1>
-        <h2>
-            <group>
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                <a href="mailto:alberto.garc.garc@gmail.com">Mail</a>
-            </group>
-            <group>
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                <a href="https://www.linkedin.com/in/alberto-garcía-garcía-637063173">LinkedIn</a>
-            </group>
-            <group>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <a href="https://www.instagram.com/alberto_gg_/">Instagram</a>
-            </group>
-        </h2>
+        <div id="imagen-portada">
+            <img src="img/Elipse 7.png">
+        </div>
+    </section>
+    <section id="projects">
+
+    </section>
+    <section id="about">
+
+    </section>
+    <section id="contact">
+        <div id="bio">
+            <h2>
+                Alberto García
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur bibendum augue vulputate
+                porttitor. Ut feugiat laoreet ipsum, ut efficitur nibh tristique at. Proin ullamcorper libero nulla, ut
+                cursus neque placerat at. Aenean interdum magna nec condimentum dictum. Sed tempus lorem sit amet dolor
+                ullamcorper, ac pellentesque nulla tempus. Proin enim nibh, venenatis eget odio at, aliquam pretium
+                elit. Nam a feugiat justo.
+                <br><br>
+                Mauris sodales elit in lacinia lacinia. Nulla pharetra diam ut purus dignissim fringilla. Integer enim
+                turpis, consectetur et consequat vitae, fermentum et velit. Etiam a feugiat sapien. Sed ligula arcu,
+                hendrerit ultricies felis sit amet, dapibus tempor magna.
+                <br><br>
+                Quisque congue, odio a condimentum viverra, massa ipsum ornare eros, nec molestie purus nulla non sem.
+                Aliquam semper est turpis, sit amet tincidunt enim fermentum porta. Donec blandit arcu eu eros
+                consectetur ultrices. In fringilla fringilla ultricies.
+            </p>
+        </div>
+        <div id="social">
+            <h2>
+                <group>
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <a href="mailto:alberto.garc.garc@gmail.com">Mail</a>
+                </group>
+                <group>
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/in/alberto-garcía-garcía-637063173">LinkedIn</a>
+                </group>
+                <group>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <a href="https://www.instagram.com/alberto_gg_/">Instagram</a>
+                </group>
+            </h2>
+        </div>
     </section>
 </body>
 

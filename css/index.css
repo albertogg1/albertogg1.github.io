@@ -1,41 +1,106 @@
+html::-webkit-scrollbar{
+    display: none;
+}
+
 body {
     margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #EAEBED;
+    color: #2E424D;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-a:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 0.5px;
-}
+/* Portada */
 
-.portada {
-    /* background: rgb(191, 217, 226); */
-    width: 100%;
-    height: 100%;
-
+#portada {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    position: relative;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    margin: 0 0;
+    overflow: hidden;
 }
 
-.portada>h1 {
+#portada>h1 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     font-weight: 700;
-    margin: 10px;
+    margin: 0;
+    padding-left: 150px;
+    align-self: center;
 }
 
-.portada>h2{
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 30px;
-    margin: 8px;
+#imagen-portada {
+    clip-path: circle(750px at 100% 50%);
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
 
+#imagen-portada>img {
+    object-position: 200px;
+    transform: scale(5);
+}
+
+
+/* Contacto */
+#contact {
+    display: flex;
+    position: relative;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+/* Biografía */
+#contact>#bio {
+    width: 70vw;
     display: flex;
     flex-direction: column;
+}
+
+#contact>#bio>h2 {
+    margin: 15vh 0 5vh 15vh;
+    font-size: 40px;
+}
+
+#contact>#bio>p {
+    margin: 0 15vh;
+    font-family:  'Raleway', sans-serif;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+/* Redes sociales */
+#contact>#social {
+    width: 30vw;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#contact>#social>h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 17vh 10vh;
+    color: #2E424D;
+}
+
+#contact>#social>h2>group>a {
+    text-decoration: none;
+    color: #2E424D;
+}
+#contact>#social>h2>group>a:hover {
+    font-weight: 400;
 }
