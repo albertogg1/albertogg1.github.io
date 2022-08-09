@@ -23,7 +23,7 @@
 }
 
 .topnav-parent{
-    width: 500px;
+    width: 450px;
     font-size: 16px;
     margin-left: auto;
     margin-right: 50px;
@@ -40,4 +40,9 @@
 
 .topnav-parent>a:hover{
     text-decoration: underline;
+}
+
+.fa-bars{
+    display: none;
+    font-size: 25px;
 }
