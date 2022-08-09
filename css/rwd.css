@@ -6,54 +6,74 @@
     .topnav-parent>a:nth-child(5),
     .topnav-parent>a:nth-child(6),
     .topnav-parent>svg:nth-child(2),
-    .topnav-parent>svg:nth-child(4){
+    .topnav-parent>svg:nth-child(4) {
         display: none;
     }
 
     /* Se muestran las tres rayitas */
-    .topnav-parent i:nth-child(7){
+    .topnav-parent i:nth-child(7) {
         display: block;
         right: 0;
     }
 
-    .topnav-parent{
+    .topnav-parent {
         width: fit-content;
     }
 
-    #imagen-portada{
+    #imagen-portada {
         width: 150vw;
     }
 
     /* Se reducen los margenes izquierdos */
-    #logo{
+    #logo {
         margin-left: 30px;
     }
-    #home>h1{
-        padding-left: 50px;
+
+    #home>h1 {
+        padding: 0 50px;
+
+    }   
+
+    /* Proyecto */
+    #projects>h1{
+        padding: 15vh 0 5vh 15vw;
+    }
+
+    .card-container{
+        margin: 0 15vw;
     }
 
     /* Contact uno debajo de otro */
-    #contact{
+    #contact {
         flex-direction: column;
     }
-    #contact>#bio{
+
+    #contact>#bio {
         width: 100vw;
         height: 75vh;
     }
-    #contact>#bio>p{
+
+    #contact>#bio>h2{
+        margin: 15vh 0 5vh 15vw
+    }
+
+    #contact>#bio>p {
+        margin: 0 15vw 5vh 15vw;
         max-height: 40vh;
     }
-    #contact>#social{
+
+    #contact>#social {
         width: 100vw;
         height: 25vh;
     }
-    #contact>#social>h2{
-        margin: 0 0 5vw 15vw;
+
+    #contact>#social>h2 {
+        margin: 0 0 5vh 15vw;
     }
 }
 
 @media screen and (max-width: 600px) {
-    #imagen-portada{
+    #imagen-portada {
         width: 220vw;
     }
 }

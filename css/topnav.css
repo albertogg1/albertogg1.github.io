@@ -7,12 +7,13 @@
     display: flex;
     align-items: center;
 
-    /* background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 100px */;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
 }
 
 #logo{
-    color: #2E424D;
+    /* color: #2E424D; */ /* Despues */
+    color: #EAEBED;
     margin-left: 75px;
     width: fit-content;
     font-size: 50px;
