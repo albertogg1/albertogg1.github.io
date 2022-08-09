@@ -10,7 +10,14 @@
 }
 
 .card-container::-webkit-scrollbar {
-    display: none;
+    height: 8px;
+}
+.card-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.card-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
 }
 
 .card {
@@ -47,6 +54,7 @@
     white-space: nowrap;
     overflow: auto;
 }
+
 .card>.titulo>h1::-webkit-scrollbar {
     display: none;
 }
