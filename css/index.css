@@ -1,4 +1,4 @@
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     display: none;
 }
 
@@ -12,7 +12,7 @@ body {
 
 /* Portada */
 
-#portada {
+#home {
     display: flex;
     position: relative;
     top: 0;
@@ -20,9 +20,17 @@ body {
     z-index: 2;
     margin: 0 0;
     overflow: hidden;
-}
+}/* 
+div#home::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(rgba(46, 66, 77, 0), rgba(46, 66, 77, 1));
+} */
 
-#portada>h1 {
+#home>h1 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     font-weight: 700;
@@ -46,6 +54,21 @@ body {
     transform: scale(5);
 }
 
+/* Proyectos */
+#projects {
+    height: 100vh;
+    width: 100vw;
+    background-color: #2E424D;
+}
+
+#projects>h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    padding: 15vh 0 5vh 15vh;
+    margin: 0;
+    color: #EAEBED;
+
+}
 
 /* Contacto */
 #contact {
@@ -72,7 +95,7 @@ body {
 
 #contact>#bio>p {
     margin: 0 15vh;
-    font-family:  'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
     max-height: 60vh;
     overflow: auto;
 }
@@ -101,6 +124,25 @@ body {
     text-decoration: none;
     color: #2E424D;
 }
+
 #contact>#social>h2>group>a:hover {
     font-weight: 400;
+}
+
+
+/* CSS Snap */
+.group{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.group::-webkit-scrollbar{
+    display: none;
+}
+
+.group>div{
+    scroll-snap-align: start;
 }

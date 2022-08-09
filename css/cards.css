@@ -1,0 +1,39 @@
+.card-container{
+    margin: 0 15vh;
+    padding: 5vh 0;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+}
+
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    scroll-snap-align: start;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 25px;/* 
+    box-shadow: 10px 10px 20px rgb(19, 30, 35),
+                -5px -5px 20px rgb(86, 112, 126); */
+}
+
+.card>img{
+    border-radius: 15px 15px 0 0;
+    width: fit-content;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card>.titulo{
+    font-family: 'Alliance';
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 0 0 15px 15px;
+}

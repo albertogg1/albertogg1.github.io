@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/topnav.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cards.css">
 </head>
 
 <body>
     <div class="topnav">
-        <div id="logo">
+        <a href="#home" id="logo">
             <i class="fa fa-globe" aria-hidden="true"></i>
-        </div>
+        </a>
         <div class="topnav-parent">
             <a href="#projects">
                 Proyectos
@@ -43,56 +44,87 @@
             </a>
         </div>
     </div>
-    <section id="portada">
-        <h1>
-            Hola, soy <br>
-            Alberto García
-        </h1>
-        <div id="imagen-portada">
-            <img src="img/Elipse 7.png">
-        </div>
-    </section>
-    <section id="projects">
 
-    </section>
-    <section id="contact">
-        <div id="bio">
-            <h2>
+    <div class="group">
+        <div id="home">
+            <h1>
+                Hola, soy <br>
                 Alberto García
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur bibendum augue vulputate
-                porttitor. Ut feugiat laoreet ipsum, ut efficitur nibh tristique at. Proin ullamcorper libero nulla, ut
-                cursus neque placerat at. Aenean interdum magna nec condimentum dictum. Sed tempus lorem sit amet dolor
-                ullamcorper, ac pellentesque nulla tempus. Proin enim nibh, venenatis eget odio at, aliquam pretium
-                elit. Nam a feugiat justo.
-                <br><br>
-                Mauris sodales elit in lacinia lacinia. Nulla pharetra diam ut purus dignissim fringilla. Integer enim
-                turpis, consectetur et consequat vitae, fermentum et velit. Etiam a feugiat sapien. Sed ligula arcu,
-                hendrerit ultricies felis sit amet, dapibus tempor magna.
-                <br><br>
-                Quisque congue, odio a condimentum viverra, massa ipsum ornare eros, nec molestie purus nulla non sem.
-                Aliquam semper est turpis, sit amet tincidunt enim fermentum porta. Donec blandit arcu eu eros
-                consectetur ultrices. In fringilla fringilla ultricies.
-            </p>
+            </h1>
+            <div id="imagen-portada">
+                <img src="img/Elipse 7.png">
+            </div>
         </div>
-        <div id="social">
-            <h2>
-                <group>
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                    <a href="mailto:alberto.garc.garc@gmail.com">Mail</a>
-                </group>
-                <group>
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                    <a href="https://www.linkedin.com/in/alberto-garcía-garcía-637063173">LinkedIn</a>
-                </group>
-                <group>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <a href="https://www.instagram.com/alberto_gg_/">Instagram</a>
-                </group>
-            </h2>
+        <div id="projects">
+            <h1>
+                Proyectos
+            </h1>
+
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/">
+                    <div class="titulo">
+                        Aplicación web juliacastrog.es
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/">
+                    <div class="titulo">
+                        Pomodoro Bot
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </section>
+        <div id="contact">
+            <div id="bio">
+                <h2>
+                    Alberto García
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur bibendum augue
+                    vulputate
+                    porttitor. Ut feugiat laoreet ipsum, ut efficitur nibh tristique at. Proin ullamcorper libero nulla,
+                    ut
+                    cursus neque placerat at. Aenean interdum magna nec condimentum dictum. Sed tempus lorem sit amet
+                    dolor
+                    ullamcorper, ac pellentesque nulla tempus. Proin enim nibh, venenatis eget odio at, aliquam pretium
+                    elit. Nam a feugiat justo.
+                    <br><br>
+                    Mauris sodales elit in lacinia lacinia. Nulla pharetra diam ut purus dignissim fringilla. Integer
+                    enim
+                    turpis, consectetur et consequat vitae, fermentum et velit. Etiam a feugiat sapien. Sed ligula arcu,
+                    hendrerit ultricies felis sit amet, dapibus tempor magna.
+                    <br><br>
+                    Quisque congue, odio a condimentum viverra, massa ipsum ornare eros, nec molestie purus nulla non
+                    sem.
+                    Aliquam semper est turpis, sit amet tincidunt enim fermentum porta. Donec blandit arcu eu eros
+                    consectetur ultrices. In fringilla fringilla ultricies.
+                </p>
+            </div>
+            <div id="social">
+                <h2>
+                    <group>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <a href="mailto:alberto.garc.garc@gmail.com">Mail</a>
+                    </group>
+                    <group>
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        <a href="https://www.linkedin.com/in/alberto-garcía-garcía-637063173">LinkedIn</a>
+                    </group>
+                    <group>
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        <a href="https://github.com/albertogg1">Github</a>
+                    </group>
+                    <!-- <group>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="https://www.instagram.com/alberto_gg_/">Instagram</a>
+                    </group> -->
+                    
+                </h2>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
