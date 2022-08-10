@@ -159,9 +159,31 @@ body {
     color: #2E424D;
 }
 
+/* Botón home */
+.circle {
+    text-decoration: none;
+    z-index: 5;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    clip-path: circle(50%);
+    background-color: #EAEBED;
+    color: #2E424D;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle>i {
+    font-size: 30px;
+    margin-bottom: 4px;
+}
 
 /* CSS Scroll Snap */
-.group{
+.group {
     width: 100vw;
     height: 100vh;
     scroll-snap-type: y mandatory;
@@ -169,10 +191,10 @@ body {
     scroll-behavior: smooth;
 }
 
-.group::-webkit-scrollbar{
+.group::-webkit-scrollbar {
     display: none;
 }
 
-.group>div{
+.group>div {
     scroll-snap-align: start;
 }
