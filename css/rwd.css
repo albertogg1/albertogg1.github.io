@@ -21,7 +21,7 @@
     }
 
     #imagen-portada {
-        width: 150vw;
+        width: 50vw;
     }
 
     /* Se reducen los margenes izquierdos */
@@ -54,10 +54,14 @@
     }
 
     #contact>#bio>h2{
-        margin: 15vh 0 5vh 15vw
+        margin: 15vh 15vw 5vh 15vw
     }
 
-    #contact>#bio>p {
+    #contact>#bio>h1 {
+        margin: 1vh 15vw;
+    }
+
+    #contact>#bio>p{
         margin: 0 15vw 5vh 15vw;
         max-height: 40vh;
     }
@@ -73,7 +77,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    #imagen-portada {
-        width: 220vw;
+    #imagen-portada{
+        width: 0;
     }
+
+    .topnav-parent{
+        color: #2E424D;
+    }
+
 }

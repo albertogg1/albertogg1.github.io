@@ -67,12 +67,12 @@ body {
 }
 
 #imagen-portada {
-    clip-path: circle(750px at 100% 50%);
     overflow: hidden;
     position: absolute;
     z-index: -1;
     top: 0;
-    width: 100vw;
+    right: 0;
+    width: 600px;
     height: 100vh;
 }
 
@@ -118,6 +118,13 @@ body {
 #contact>#bio>h2 {
     margin: 15vh 0 5vh 15vh;
     font-size: 40px;
+}
+
+#contact>#bio>h1{
+    margin: 1vh 15vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 #contact>#bio>p {
