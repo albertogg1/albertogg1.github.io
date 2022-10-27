@@ -1,0 +1,39 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabecera */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(3px);
+    color: white;
+}
+
+header i{
+    margin-left: 16px;
+}
+
+header>#logo{
+    flex: 1;
+    text-align: center;
+}
+
+header>div{
+    margin-right: 16px;
+}
+
+/* Section */
+section{
+    margin-top: 50px;
+    padding: 16px;
+}
