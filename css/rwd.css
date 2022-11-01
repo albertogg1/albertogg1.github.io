@@ -1,0 +1,32 @@
+@media screen and (max-width: 900px) {
+
+    /* Header */
+    #tema>p {display: none;}
+    #idioma>p {display: none;}
+    #contacto>p {display: none;}
+    /* #mas{display: block;} */
+
+    .left{margin-left: 90px;}
+    .right{margin-right: 90px;}
+    .welcome>div{margin: 0 90px;}
+}
+
+@media screen and (max-width: 700px) {
+
+    /* Header */
+    #tema {display: none;}
+    #idioma {display: none;}
+    #contacto {display: none;}
+    #mas{display: block;}
+
+    .left{margin-left: 40px;}
+    .right{margin-right: 40px;}
+    .welcome>div{margin: 0 40px;}
+}
+
+@media screen and (max-width: 400px) {
+
+    .left{margin-left: 20px;}
+    .right{margin-right: 20px;}
+    .welcome>div{margin: 0 20px;}
+}

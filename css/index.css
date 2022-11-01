@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+html,
+body,
+p {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+}
+
+h1{font-size: 20px;}
+h2{font-size: 18px;}
+h3{font-size: 16px;}
+.small{font-size: 14px;}
+
+/* Cabecera */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(1px);
+    color: white;
+}
+
+header>#logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+header>div {
+    margin-right: 16px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    margin-left: 120px;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 120px;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 36px;
+}
+
+.fa-solid {
+    margin: 0 8px 0 0;
+}
+
+#mas {
+    display: none;
+}
+
+
+/* Welcome */
+.welcome{
+    background: white;
+    max-width: 700px;
+}
+
+.welcome>div:first-child{margin-top: 100px;}
+.welcome>div{margin: 0 120px;}
+
+.welcome>.fotos>img{
+    display: inline;
+    width: 200px;
+}
+
+/* Flecha */
+.flecha{
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    color: black;
+    
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
+    padding: 8px 20px;
+
+    transform: translate(-50%);
+
+    animation: up 2s ease-in-out;
+    animation-iteration-count: 4;
+
+    transition: all .5s ease-in-out;
+}
+
+@keyframes up {
+    0%{transform: translateX(-50%) translateY(0); opacity: 0.5;}
+    50%{transform: translateX(-50%) translateY(-10px); opacity: 1;}    
+    100%{transform: translateX(-50%) translateY(0); opacity: 0.5;}
+}
+
+.flecha:hover{
+    transform: translate(-50%) scale(1.05);
+}
+
+/* Slides */
+.proyectos{
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.proyectos::-webkit-scrollbar{
+    display: none;
+}
+
+.slide{
+    scroll-snap-align: center;
+
+    min-width: 100vw;
+    height: calc(100vh - 60px);
+}
+
+nav.slider{
+    width: fit-content;
+    position: relative;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav.slider>a{
+    margin: 0 2px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 100%;
+}
+
+#juliacastrog{background-color: rgb(34, 34, 68);}
+#pomodoroBot{background-color: rgb(160, 46, 111);}
