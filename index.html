@@ -1,95 +1,110 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
-<script src="js/FontAwesome.js" crossorigin="anonymous"></script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<link rel="stylesheet" href="css/index.css">
-<!-- RWD -->
-<link rel="stylesheet" href="css/rwd.css">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Alberto García</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Hojas de estilo personales -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            top: 0;
+            background-color: #EAEBED;
+            color: #2E424D;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            width: 90vw;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+        }
+
+        h1>p {
+            width: fit-content;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+
+        /* Redes sociales */
+        #social {
+            position: absolute;
+            bottom: 0;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #social>a {
+            margin: 0 20px 10vh;
+            background-color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform .5s ease;
+        }
+
+        #social>a:hover {
+            transform: translateY(-10px);
+        }
+
+        #social>a>i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            color: #2E424D;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js" defer="defer"></script>
 </head>
 
 <body>
-    <header>
-        <div class="left flex">
-            <i class="fa-solid fa-house" id="home"></i>
-            <div class="group-item" id="tema">
-                <i class="fa-solid fa-sun" aria-hidden="true"></i>
-                <p>Tema</p>
-            </div>
-            <div class="group-item" id="idioma">
-                <i class="fa-solid fa-language" aria-hidden="true"></i>
-                <p>Idioma</p>
-            </div>
-        </div>
-        <h1 id="logo">Alberto</h1>
-        <div class="right flex">
-            <div class="group-item" id="contacto">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
-                <p>Sobre mí</p>
-            </div>
-            <div class="group-item" id="contacto">
-                <i class="fa-solid fa-phone"></i>
-                <p>Contacto</p>
-            </div>
-            <div class="group-item" id="mas">
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-            </div>
-        </div>
-    </header>
-
-
-    <!-- Bienvenida -->
-    <section class="welcome">
-        <div>
-            <h1>Lorem ipsum sit (Bio)</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus turpis, suscipit ut cursus quis,
-                pulvinar vel lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                curae; Mauris quis eros eleifend, ullamcorper nisl vel, faucibus arcu. Aliquam porta ullamcorper
-                gravida. Donec nec laoreet tortor. Aenean feugiat laoreet sapien, nec efficitur diam ullamcorper et.
-                Praesent quis ornare nisi, in fermentum quam.</p>
-        </div>
-
-        <div>
-            <h1>Skills</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus turpis, suscipit ut cursus quis,
-                pulvinar vel lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                curae; Mauris quis eros eleifend, ullamcorper nisl vel, faucibus arcu. Aliquam porta ullamcorper
-                gravida. Donec nec laoreet tortor. Aenean feugiat laoreet sapien, nec efficitur diam ullamcorper et.
-                Praesent quis ornare nisi, in fermentum quam.</p>
-        </div>
-
-        <div class="fotos">
-            <img src="img/pomodoro_shadow.png" alt="Imagen de Alberto">
-        </div>
-
-        <label class="flecha flex">
-            <i class="fa-solid fa-angles-down"></i>
-            <p>Para saber más</p>
-        </label>
-    </section>
-
-
-
-    <!-- Proyectos -->
-    <div class="proyectos">
-        <div class="slide" id="juliacastrog">
-            Julia
-        </div>
-        <div class="slide" id="pomodoroBot">
-            Pomodoro Bot Discord
-        </div>
-    </div>
-    <nav class="slider">
-        <a href="#juliacastrog"></a>
-        <a href="#pomodoroBot"></a>
-    </nav>
 
 </body>
+<h1>
+    Hola, soy
+    <p id="typewrite" style="margin: 0;"></p>
+</h1>
+
+
+<div id="social">
+    <a href="mailto:alberto.garc.garc@gmail.com">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/alberto-garcía-garcía-637063173">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <a href="https://github.com/albertogg1">
+        <i class="fa fa-github" aria-hidden="true"></i>
+    </a>
+</div>
+
 
 </html>

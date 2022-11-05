@@ -1,32 +1,88 @@
 @media screen and (max-width: 900px) {
 
-    /* Header */
-    #tema>p {display: none;}
-    #idioma>p {display: none;}
-    #contacto>p {display: none;}
-    /* #mas{display: block;} */
+    /* Se quitan los iconos y el texto de la topnav */
+    .topnav-parent>a:nth-child(1),
+    .topnav-parent>a:nth-child(3),
+    .topnav-parent>a:nth-child(5),
+    .topnav-parent>a:nth-child(6),
+    .topnav-parent>svg:nth-child(2),
+    .topnav-parent>svg:nth-child(4) {
+        display: none;
+    }
 
-    .left{margin-left: 90px;}
-    .right{margin-right: 90px;}
-    .welcome>div{margin: 0 90px;}
+    /* Se muestran las tres rayitas */
+    .topnav-parent i:nth-child(7) {
+        display: block;
+        right: 0;
+    }
+
+    .topnav-parent {
+        width: fit-content;
+    }
+
+    #imagen-portada {
+        width: 50vw;
+    }
+
+    /* Se reducen los margenes izquierdos */
+    #logo {
+        margin-left: 30px;
+    }
+
+    #home>h1 {
+        padding: 0 50px;
+
+    }   
+
+    /* Proyecto */
+    #projects>h1{
+        padding: 15vh 0 5vh 15vw;
+    }
+
+    .card-container{
+        margin: 0 15vw;
+    }
+
+    /* Contact uno debajo de otro */
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact>#bio {
+        width: 100vw;
+        height: 75vh;
+    }
+
+    #contact>#bio>h2{
+        margin: 15vh 15vw 5vh 15vw
+    }
+
+    #contact>#bio>h1 {
+        margin: 1vh 15vw;
+    }
+
+    #contact>#bio>p{
+        margin: 0 15vw 5vh 15vw;
+        max-height: 40vh;
+    }
+
+    #contact>#social {
+        width: 100vw;
+        height: 25vh;
+    }
+
+    #contact>#social>h2 {
+        margin: 0 0 5vh 15vw;
+    }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
+    #imagen-portada{
+        width: 0;
+    }
 
-    /* Header */
-    #tema {display: none;}
-    #idioma {display: none;}
-    #contacto {display: none;}
-    #mas{display: block;}
+    .topnav-parent{
+        color: #2E424D;
+    }
 
-    .left{margin-left: 40px;}
-    .right{margin-right: 40px;}
-    .welcome>div{margin: 0 40px;}
-}
-
-@media screen and (max-width: 400px) {
-
-    .left{margin-left: 20px;}
-    .right{margin-right: 20px;}
-    .welcome>div{margin: 0 20px;}
 }

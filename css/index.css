@@ -1,155 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+html::-webkit-scrollbar {
+    display: none;
+}
 
-html,
-body,
-p {
+body {
     margin: 0;
     padding: 0;
-
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 16px;
-}
-
-h1{font-size: 20px;}
-h2{font-size: 18px;}
-h3{font-size: 16px;}
-.small{font-size: 14px;}
-
-/* Cabecera */
-header {
-    position: fixed;
     top: 0;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-
-    height: 60px;
-
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(1px);
-    color: white;
+    background-color: #EAEBED;
+    color: #2E424D;
 }
 
-header>#logo {
+/* Portada */
+
+#home {
+    display: flex;
+    position: relative;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+#home>h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 150px;
+    align-self: center;
+}
+
+.line {
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 1s steps(13) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#imagen-portada {
+    overflow: hidden;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100vh;
 }
 
-header>div {
-    margin-right: 16px;
+#imagen-portada>img {
+    object-position: 200px;
+    transform: scale(5);
 }
 
-.flex {
+/* Proyectos */
+#projects {
+    height: 100vh;
+    width: 100vw;
+    background-color: #2E424D;
+}
+
+#projects>h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    padding: 17vh 0 5vh 15vh;
+    margin: 0;
+    color: #EAEBED;
+
+}
+
+/* Contacto */
+#contact {
     display: flex;
-    align-items: center;
+    position: relative;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    margin: 0 0;
+    overflow: hidden;
 }
 
-.left {
-    margin-left: 120px;
-}
-
-.right {
-    margin-left: auto;
-    margin-right: 120px;
-}
-
-.group-item {
+/* Biografía */
+#contact>#bio {
+    width: 70vw;
     display: flex;
-    align-items: center;
-    margin: 0 0 0 36px;
+    flex-direction: column;
 }
 
-.fa-solid {
-    margin: 0 8px 0 0;
+#contact>#bio>h2 {
+    margin: 15vh 0 5vh 15vh;
+    font-size: 40px;
 }
 
-#mas {
-    display: none;
+#contact>#bio>h1{
+    margin: 1vh 15vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
 }
 
+#contact>#bio>p {
+    margin: 0 15vh;
+    font-family: 'Raleway', sans-serif;
+    max-height: 60vh;
+    overflow: auto;
+}
 
-/* Welcome */
-.welcome{
+/* Redes sociales */
+#contact>#social {
+    width: 30vw;
     background: white;
-    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.welcome>div:first-child{margin-top: 100px;}
-.welcome>div{margin: 0 120px;}
-
-.welcome>.fotos>img{
-    display: inline;
-    width: 200px;
+#contact>#social>a {
+    margin: 0 20px 10vh;
+    background-color: #EAEBED;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform .5s ease;
 }
 
-/* Flecha */
-.flecha{
-    opacity: 0;
+#contact>#social>a:hover {
+    transform: translateY(-10px);
+}
+
+#contact>#social>a>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #2E424D;
+}
+
+/* Botón home */
+.circle {
+    text-decoration: none;
+    z-index: 5;
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    color: black;
-    
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #d9d9d9,
-                -20px -20px 60px #ffffff;
-    padding: 8px 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    clip-path: circle(50%);
+    background-color: #EAEBED;
+    color: #2E424D;
 
-    transform: translate(-50%);
-
-    animation: up 2s ease-in-out;
-    animation-iteration-count: 4;
-
-    transition: all .5s ease-in-out;
-}
-
-@keyframes up {
-    0%{transform: translateX(-50%) translateY(0); opacity: 0.5;}
-    50%{transform: translateX(-50%) translateY(-10px); opacity: 1;}    
-    100%{transform: translateX(-50%) translateY(0); opacity: 0.5;}
-}
-
-.flecha:hover{
-    transform: translate(-50%) scale(1.05);
-}
-
-/* Slides */
-.proyectos{
-    scroll-snap-type: x mandatory;
     display: flex;
-    overflow-x: scroll;
+    justify-content: center;
+    align-items: center;
 }
 
-.proyectos::-webkit-scrollbar{
+.circle>i {
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+/* CSS Scroll Snap */
+.group {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.group::-webkit-scrollbar {
     display: none;
 }
 
-.slide{
-    scroll-snap-align: center;
-
-    min-width: 100vw;
-    height: calc(100vh - 60px);
+.group>div {
+    scroll-snap-align: start;
 }
-
-nav.slider{
-    width: fit-content;
-    position: relative;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-nav.slider>a{
-    margin: 0 2px;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 100%;
-}
-
-#juliacastrog{background-color: rgb(34, 34, 68);}
-#pomodoroBot{background-color: rgb(160, 46, 111);}

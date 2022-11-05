@@ -1,0 +1,60 @@
+.card-container {
+    margin: 0 15vh;
+    padding: 1vh 0;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+}
+
+.card-container::-webkit-scrollbar {
+    height: 8px;
+}
+.card-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.card-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.card {
+    min-width: 250px;
+    width: 250px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 25px;
+    overflow: hidden;
+    /* 
+    box-shadow: 10px 10px 20px rgb(19, 30, 35),
+                -5px -5px 20px rgb(86, 112, 126); */
+}
+
+.card>img {
+    border-radius: 15px 15px 0 0;
+    height: 250px;
+    object-fit: cover;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card>.titulo>h1 {
+    font-family: 'Alliance';
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 0 0 15px 15px;
+
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.card>.titulo>h1::-webkit-scrollbar {
+    display: none;
+}
