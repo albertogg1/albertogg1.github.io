@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* font-family: 'Permanent Marker', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* font-family: 'Playfair Display', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
     --main-bg-color: 250, 250, 250;         /* Blanco */
@@ -13,22 +15,28 @@
     --a: 76, 145, 168;                      /* Enlaces <a></a> */
 }
 
+::-webkit-scrollbar {width: 4px;}
+::-webkit-scrollbar-thumb {background: rgba(0, 0, 0, 0.3); border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: rgba(0, 0, 0, 0.4);}
+
 html,
 body,
 p {
+    scroll-behavior: smooth;
+
     margin: 0;
     padding: 0;
 
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 a{color: rgb(var(--a)); text-decoration: none;}
 
-h1 {font-size: 20px;}
-h2 {font-size: 18px;}
-h3 {font-size: 16px;}
+h1 {font-size: 28px; font-family: 'Playfair Display', serif; font-weight: 900;}
+h2 {font-size: 20px;}
+h3 {font-size: 18px;}
 
-.small {font-size: 14px;}
+/* .small {font-size: 14px;} */
 
 /* Cabecera */
 header {
@@ -50,8 +58,9 @@ header a{color: var(--main-bg-color);}
 header p{font-size: 14px;}
 
 header>#logo {
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
-    font-family: 'Permanent Marker', cursive;
+    font-weight: 900;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -99,7 +108,7 @@ header .fa-solid {
 
     /* Grid */
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto;
     grid-column-gap: 24px;
     grid-row-gap: 0px;
@@ -107,10 +116,12 @@ header .fa-solid {
 }
 
 .welcome>div:first-child {
+    max-width: 350px;
     grid-column: 1 / 2;
     margin-top: 50px;
 }
 .welcome>div:nth-child(2){
+    max-width: 350px;
     grid-column: 1 / 2;
 
     margin-bottom: 100px;
@@ -118,8 +129,6 @@ header .fa-solid {
 .welcome>div:nth-child(3){
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-
-    margin: 0;
 }
 
 .welcome>.fotos{
@@ -196,95 +205,37 @@ header .fa-solid {
     opacity: 1;
 }
 
-
-
-/* Flecha */
-/* .flecha {
-    opacity: 0;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    color: black;
-
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow: 20px 20px 60px #d9d9d9,
-                -20px -20px 60px #ffffff;
-    padding: 8px 20px;
-
-    transform: translate(-50%);
-
-    animation: up 2s ease-in-out;
-    animation-iteration-count: 4;
-
-    transition: all .5s ease-in-out;
-}
-
-@keyframes up {
-    0% {
-        transform: translateX(-50%) translateY(0);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: translateX(-50%) translateY(-10px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-50%) translateY(0);
-        opacity: 0.5;
-    }
-}
-
-.flecha:hover {
-    transform: translate(-50%) scale(1.05);
-} */
-
-/* Slides */
-/* .proyectos {
-    scroll-snap-type: x mandatory;
-    display: flex;
-    overflow-x: scroll;
-}
-
-.proyectos::-webkit-scrollbar {
-    display: none;
-}
-
-.slide {
-    scroll-snap-align: center;
-
+menu{
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
     min-width: 100vw;
-    height: calc(100vh - 60px);
-}
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
 
-nav.slider {
-    width: fit-content;
-    position: relative;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-nav.slider>a {
-    margin: 0 2px;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 100%;
+menu a{
+    color: white;
+    margin-block: 12px;
 }
-
-#juliacastrog {
-    background-color: rgb(34, 34, 68);
+menu a:hover{
+    font-weight: 600;
 }
-
-#pomodoroBot {
-    background-color: rgb(160, 46, 111);
+menu #close{
+    position: absolute;
+    font-size: 20px;
+    top: 18px;
+    right: 60px;
+    color: white;
 }
- */
-
 
 
 
