@@ -198,6 +198,10 @@ header .fa-solid {
     background-color: var(--main-bg-color2);
     font-size: 18px;
 }
+.socials>a:hover{
+    box-shadow: inset 2px 3px 5px lightgrey;
+
+}
 
 .tooltip{
     opacity: 0;
@@ -269,6 +273,13 @@ menu #close{
     right: 50px;
     color: white;
 }
+
+
+
+
+
+
+
 
 
 
