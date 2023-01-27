@@ -38,6 +38,10 @@ h1 {font-size: 28px; font-family: 'Playfair Display', serif; font-weight: 900;}
 h2 {font-size: 20px;}
 h3 {font-size: 18px;}
 
+.index-margin{
+    margin-inline: 120px;
+}
+
 /* .small {font-size: 14px;} */
 
 /* Cabecera */
@@ -121,7 +125,7 @@ header>div {
 }
 
 header .fa-solid {
-    margin: 0 8px 0 0;
+    margin-right: 8px;
 }
 
 #mas {
@@ -131,8 +135,6 @@ header .fa-solid {
 
 /* Welcome */ 
 .welcome {
-    margin-inline: 120px;
-
     min-height: calc(100vh - 60px);
 
     /* Grid */
@@ -171,8 +173,6 @@ header .fa-solid {
 
 .welcome>.fotos>img {border-radius: 100%;}
 
-
-
 .socials{
     margin-inline: auto;
     margin-top: 1.75em;
@@ -199,8 +199,24 @@ header .fa-solid {
     font-size: 18px;
 }
 .socials>a:hover{
-    box-shadow: inset 2px 3px 5px lightgrey;
+    box-shadow: inset 2px 3px 5px rgba(0, 0, 0, 0.4);
 
+}
+
+.socials>a:hover#instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.socials>a:hover#linkedin{
+    background: #0e76a8;
+}
+.socials>a:hover#github{
+    background: #171515;
+}
+.socials>a:hover#gmail{
+    background: #c71610;
+}
+.socials>a:hover>i{
+    color: white;
 }
 
 .tooltip{
@@ -274,16 +290,90 @@ menu #close{
     color: white;
 }
 
+/* Cards de cada proyecto */
+line{
+    display: block;
+    height: 60px;
+    margin-left: 58px;
+    width: 4px;
+}
+.proyecto{
+    display: flex;
+    align-items: center;
+}
+.proyecto>img{
+    background-color: whitesmoke;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 16px;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+}
+.proyecto>.descripcion{
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    width: 80vw;   
+}
+.descripcion-fecha{
+    margin: -12px 0 4px 0;
+    font-size: smaller;
+    font-weight: bold;
+}
+.descripcion>.texto{
+    font-size: smaller;
+}
+.proyecto>.descripcion>h2{
+    margin: 0 0 8px 0;
+}
+.proyecto>a{
+    min-width: fit-content;
+    font-size: smaller;
+    font-weight: bolder;
+    align-self: flex-end;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #3D3D3D;
+    background: rgb(246, 246, 246);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.proyecto>a:hover{
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
 
 
 
 
+footer{
+    margin-block: 50px;
+}
 
+.copyright{
+    background-color: rgb(8, 8, 8);
+    padding-block: 8px;
+    color: white;
+    font-size: small;
+    font-weight: 200;
+    text-align: center;
+}
 
-
+.up{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+}
 
 
 /* Cambios en Font Awesome */
 .fa-moon{
     transform: rotate(-10deg);
+}
+#angleUp, #angleDown{
+    font-size: x-small;
+    margin-left: 4px;
+    margin-top: 0.35em;
 }
