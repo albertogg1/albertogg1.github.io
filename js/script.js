@@ -100,15 +100,15 @@ function loop() {
 loop()
 
 function openMenu(){
-    console.log("abrir");
     document.getElementById("menu").style.display = "flex";
     document.getElementById("openMenu").style.display = "none";
     document.getElementById("closeMenu").style.display = "block";
 }
 
 function closeMenu(){
-    console.log("cerrar");
-    document.getElementById("menu").style.display = "none";
+    if(window.innerWidth < 450){
+        document.getElementById("menu").style.display = "none";
+    }
     document.getElementById("openMenu").style.display = "block";
     document.getElementById("closeMenu").style.display = "none";
 }
