@@ -98,6 +98,43 @@ nav.topbar #menu>a {
     margin-inline: 8px;
 }
 
+.burger-menu{display: none;}
+
+@media screen and (max-width: 450px) {
+    nav.topbar #menu {
+        z-index: 3;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        color: black;
+        opacity: 0.97;
+        top: 0;
+        left: 0;
+    }
+
+    nav.topbar #menu a{
+        font-size: large;
+        margin: 4px;
+    }
+
+    .burger-menu{
+        display: block;
+        z-index: 5;
+        margin-right: 20px;
+        color: inherit;
+    }
+
+    #closeMenu{
+        color: #171515;
+    }
+
+}
+
 /* Home */
 #home {
     padding: 0;
@@ -193,16 +230,23 @@ section#about {
     border-radius: 100%;
     height: 300px;
 }
-.background>svg{
+
+.background>svg {
     color: #707070;
     position: absolute;
     left: -2.5em;
     height: 200px;
     width: 200px;
 }
+
 @media screen and (max-width: 750px) {
-    .background>svg{display: none;}
-    .background>img{right: 50%; transform: translate(50%); height: 400px;}
+
+    .background>svg,
+    .background>img {
+        display: none;
+    }
+
+    /* .background>img{right: 50%; transform: translate(50%); height: 400px;} */
 }
 
 #about>div {

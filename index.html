@@ -24,10 +24,14 @@
         </svg>
     </div>
     <div id="menu">
-        <a href="#home" id="menuHome">Inicio</a>
-        <a href="#about" id="menuAbout">Sobre mí</a>
-        <a href="#projects" id="menuProjects">Proyectos</a>
-        <a href="#contact" id="menuContact">Contacto</a>
+        <a href="#home" id="menuHome" onclick="closeMenu()">Inicio</a>
+        <a href="#about" id="menuAbout" onclick="closeMenu()">Sobre mí</a>
+        <a href="#projects" id="menuProjects" onclick="closeMenu()">Proyectos</a>
+        <a href="#contact" id="menuContact" onclick="closeMenu()">Contacto</a>
+    </div>
+    <div class="burger-menu">
+        <i class="fa-solid fa-bars" id="openMenu" onclick="openMenu()"></i>
+        <i class="fa-solid fa-xmark" id="closeMenu" onclick="closeMenu()" style="display: none;"></i>
     </div>
 </nav>
 
