@@ -73,7 +73,6 @@ nav.topbar {
     width: 100%;
     height: 40px;
     color: white;
-    background-color: none;
     transition: all .35s ease-in-out;
 }
 
@@ -324,9 +323,9 @@ section#projects {
 
 .grid {
     margin-inline: 20vw;
-    display: .grid;
-    .grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
-    .grid-auto-flow: dense;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    grid-auto-flow: dense;
 }
 
 @media screen and (max-width: 600px) {
