@@ -9,11 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script src="js/FontAwesome.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
     <link rel="stylesheet" href="css/index.css">
-    <!-- RWD -->
-    <link rel="stylesheet" href="css/rwd.css">
 </head>
 
 <nav class="topbar" id="topbar">
@@ -42,14 +40,16 @@
         <h1>
             Hola
         </h1>
-        <p>
+        <div class="typeWrite">
             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z">
                 </path>
-            </svg> Soy Alberto
-        </p>
+            </svg> 
+            <p id="typeWrite"></p>
+        </div>
+
     </div>
     <a href="#about">
         <i class="fa-solid fa-arrow-down button"></i>
@@ -57,11 +57,14 @@
 </section>
 
 <section id="about">
-    <!-- <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path clip-rule="evenodd" fill-rule="evenodd"
-            d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z">
-        </path>
-    </svg> -->
+    <div class="background">
+        <svg class="about-bg" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z">
+            </path>
+        </svg>
+        <img class="about-bg" src="img/Alberto_playa.jpg"/>
+    </div>
     <div>
         <h1>Mi nombre es <span>Alberto</span> y soy estudiante de Ingeniería de
             <span>Telecomu<!-- <wbr> -->nicación</span>
@@ -75,8 +78,7 @@
             Si quieres conocer más acerca de mi trayectoria, aquí tienes acceso a mi <i>currículum</i>. -->
         </p>
         <!-- <a href="curriculum.pdf" class="button" target='_blank'>Descargar CV</a> -->
-    </div>
-    <!-- <img src="img/Alberto_playa.jpg"/> -->
+    </div>    
 </section>
 
 <section id="contador">
@@ -146,7 +148,7 @@
             </div>
         </div>
         <div class="item">
-            <a  href="http://www.pomodorobot.infinityfreeapp.com" target="_blank"></a>
+            <a href="http://www.pomodorobot.infinityfreeapp.com" target="_blank"></a>
             <img src='img/pomodoro.webp' alt=''>
             <div class="item__overlay">
                 <div class="card_title" aria-hidden="true">
@@ -195,13 +197,28 @@
             </path>
         </svg>
         <h2>Programación Web</h2>
-        <p>
-            HTML 5 <br>
-            CSS <br>
-            JavaScript <br>
-            PHP <br>
-            SQL <br>
-        </p>
+        <div class="skill_desc_group">
+            <div class="skill_desc">
+                <img src="img/HTML5.png" alt="icono HTML5"/>
+                <p>HTML</p>
+            </div>
+            <div class="skill_desc">
+                <img src="img/CSS3.png" alt="icono CSS3"/>
+                <p>CSS</p>
+            </div>
+            <div class="skill_desc">
+                <img src="img/JavaScript.png" alt="icono JavaScript"/>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill_desc">
+                <img src="img/PHP.png" alt="icono PHP"/>
+                <p>PHP</p>
+            </div>
+            <div class="skill_desc">
+                <img src="img/mysql.png" alt="icono SQL"/>
+                <p>SQL</p>
+            </div>
+        </div>
     </div>
     <!-- <div>
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -223,10 +240,17 @@
             </path>
         </svg>
         <h2>Aplicaciones y Bots</h2>
-        <p>
-            Java <br>
-            Python <br>
-        </p>
+        <div class="skill_desc_group">
+            <div class="skill_desc">
+                <img src="img/java.svg" alt="icono Java"/>
+                <p>Java</p>
+            </div>
+            <div class="skill_desc">
+                <img src="img/python.svg" alt="icono Python"/>
+                <p>Python</p>
+            </div>
+
+        </div>
     </div>
 </section>
 
