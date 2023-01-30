@@ -125,7 +125,7 @@ nav.topbar #menu>a {
     .burger-menu{
         display: block;
         z-index: 5;
-        margin-right: 20px;
+        margin-right: 7vw;
         color: inherit;
     }
 
