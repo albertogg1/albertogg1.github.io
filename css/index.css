@@ -506,12 +506,14 @@ footer {
     font-size: 12px;
 }
 
-
-
-
-
-
-
+.w3c-valid{
+    margin: 0;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #353535;
+}
 
 .socials {
     margin-inline: auto;
