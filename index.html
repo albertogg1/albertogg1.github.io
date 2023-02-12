@@ -8,9 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="js/FontAwesome.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -23,11 +25,19 @@
             </path>
         </svg>
     </div>
-    <div id="menu">
-        <a href="#home" id="menuHome" onclick="closeMenu()">Inicio</a>
-        <a href="#about" id="menuAbout" onclick="closeMenu()">Sobre mí</a>
-        <a href="#projects" id="menuProjects" onclick="closeMenu()">Proyectos</a>
-        <a href="#contact" id="menuContact" onclick="closeMenu()">Contacto</a>
+    <div id="menu" onclick="closeMenu()">
+            <div id="menuHome" >
+                <i class="fa-solid fa-house"></i><a href="#home" >Inicio</a>
+            </div>
+            <div id="menuAbout" onclick="closeMenu()">
+                <i class="fa-solid fa-user"></i><a href="#about">Sobre mí</a>
+            </div>
+            <div id="menuProjects" onclick="closeMenu()">
+                <i class="fa-solid fa-briefcase"></i><a href="#projects">Proyectos</a>
+            </div>
+            <div id="menuContact" onclick="closeMenu()">
+                <i class="fa-solid fa-address-card"></i><a href="#contact">Contacto</a>
+            </div>
     </div>
     <div class="burger-menu">
         <i class="fa-solid fa-bars" id="openMenu" onclick="openMenu()"></i>
@@ -283,8 +293,7 @@
 </footer>
 <p class="w3c-valid">
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;height:20px"
-            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+        <img style="border:0;height:20px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
             alt="¡CSS Válido!" />
     </a>
 

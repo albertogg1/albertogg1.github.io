@@ -92,14 +92,28 @@ nav.topbar #menu {
     margin-right: 5vw;
 }
 
-nav.topbar #menu>a {
-    font-size: 14px;
-    margin-inline: 8px;
+nav.topbar #menu>div{
+    display: flex;
+    align-items: center;
+    margin-inline: 12px;
+}
+
+nav.topbar #menu>div>i{
+    font-size: 12px;
+}
+
+nav.topbar #menu>div>div{
+    margin-block: 8px;
+}
+
+nav.topbar #menu i {
+    width: 14px;
+    margin-right: 8px;
 }
 
 .burger-menu{display: none;}
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
     nav.topbar #menu {
         z-index: 3;
         display: none;

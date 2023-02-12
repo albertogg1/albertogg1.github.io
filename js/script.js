@@ -106,8 +106,8 @@ function openMenu(){
 }
 
 function closeMenu(){
-    if(window.innerWidth < 450){
-        document.getElementById("menu").style.display = "none";
+    if(window.innerWidth < 650){
+        document.getElementById("menu").style.display = "";
     }
     document.getElementById("openMenu").style.display = "block";
     document.getElementById("closeMenu").style.display = "none";
