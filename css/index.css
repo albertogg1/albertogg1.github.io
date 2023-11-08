@@ -352,19 +352,23 @@ section#projects {
     opacity: 1;
 }
 
-.item:nth-child(4) {
+.item:nth-child(8n+4),
+.item:nth-child(8n+5) {
     background: #353535;
 }
 
-.item:nth-child(3) {
+.item:nth-child(8n+3),
+.item:nth-child(8n+6)  {
     background: #707070;
 }
 
-.item:nth-child(2) {
+.item:nth-child(8n+2),
+.item:nth-child(8n+7)  {
     background: #C6D6EE;
 }
 
-.item:nth-child(1) {
+.item:nth-child(8n+1),
+.item:nth-child(8n+8)  {
     background: #64BBE4;
 }
 
