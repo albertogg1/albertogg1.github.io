@@ -1,319 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="es">
-
 <head>
-    <link rel="icon" href="img/CommandLine.svg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- SEO -->
-    <title>Alberto García García</title>
-    <meta name="description"
-        content="Bienvenido a mi portfolio. Mi nombre es Alberto García García y soy Ingeniero de Telecomunicación" />
-    <meta name="keywords" content="Alberto García García, Ingeniería, Telecomunicación, teleco" />
-    <meta name="author" content="Alberto García García" />
-    <link rel="canonical" href="https://albertogg1.github.io/"/>
-
-    <script src="js/script.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — Cabecera</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
+<body>
+  <div class="container">
+    <!-- Cabecera -->
+    <header class="header" role="banner">
+      <div class="brand">
+        <div class="photo">
+          <img src="img/alberto.jpg" alt="Foto de Alberto">
+        </div>
+        <div class="name">
+          <h1>Alberto</h1>
+          <p>Desarrollo web · Cloud</p>
+        </div>
+      </div>
 
-<nav class="topbar" id="topbar">
-    <div id="logo">
-        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z">
-            </path>
-        </svg>
-    </div>
-    <div id="menu" onclick="closeMenu()">
-        <div id="menuHome">
-            <i class="fa-solid fa-house"></i><a href="#home">Inicio</a>
-        </div>
-        <div id="menuAbout" onclick="closeMenu()">
-            <i class="fa-solid fa-user"></i><a href="#about">Sobre mí</a>
-        </div>
-        <div id="menuProjects" onclick="closeMenu()">
-            <i class="fa-solid fa-briefcase"></i><a href="#projects">Proyectos</a>
-        </div>
-        <div id="menuContact" onclick="closeMenu()">
-            <i class="fa-solid fa-address-card"></i><a href="#contact">Contacto</a>
-        </div>
-    </div>
-    <div class="burger-menu">
-        <i class="fa-solid fa-bars" id="openMenu" onclick="openMenu()"></i>
-        <i class="fa-solid fa-xmark" id="closeMenu" onclick="closeMenu()" style="display: none;"></i>
-    </div>
-</nav>
 
-<section id="home">
-    <video autoplay muted loop>
-        <source src="vid/home.mp4" type="video/mp4">
-        Su navegador no soporta la etiqueta "video".
-    </video>
-    <div>
-        <h1>
-            Hola
-        </h1>
-        <div class="typeWrite">
-            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z">
-                </path>
-            </svg>
-            <p id="typeWrite"></p>
-        </div>
 
+  <div class="cta">
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+  </nav>
+    <a class="btn" href="mailto:alberto.garc.garc@gmail.com?subject=Contacto%20desde%20portfolio">Contactar</a>
+    <a class="ghost" href="#contacto">Más</a>
+  </div>
+</header>
+
+<!-- Hero/banner -->
+<section class="hero" id="inicio">
+  <img src="img/Alberto-silueta.png" alt="Silueta de Alberto" class="silueta">
+  
+  <div class="hero-text">
+    <h2>Hola — soy Alberto, hago <em>cosas que te importan</em>.</h2>
+    <p>Diseño y desarrollo soluciones digitales: páginas, apps y experiencias.</p>
+  </div>
+  
+  <div class="hero-visual">
+    <div class="card">
+      <p><strong>Disponible para:</strong><br> Contratos, Freelance, Charlas y Colaboraciones</p>
+      <p><strong>Email:</strong><br><a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
     </div>
-    <a href="#about">
-        <i class="fa-solid fa-arrow-down button"></i>
-    </a>
+  </div>
 </section>
 
-<section id="about">
-    <div class="background">
-        <svg class="about-bg" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z">
-            </path>
-        </svg>
-        <img class="about-bg" src="img/Alberto_playa.jpg" alt="Fotografía de Alberto">
-    </div>
-    <div>
-        <h1>Mi nombre es <span>Alberto</span> y soy Ingeniero de
-            <span>Telecomu<!-- <wbr> -->nicación</span>
-        </h1>
-        <p>
-            Comencé a desarrollar interés por la programación web en 2022. Desde entonces
-            he ido desarrollando distintos sitios web personales y para terceros. Además, he
-            desarrollado software variado como un Bot de Discord y actualmente me estoy formando en
-            desarrollo de aplicaciones móviles.
-            <br><br>
-            Si quieres conocer más acerca de mi trayectoria, aquí tienes acceso a mi <i>currículum</i>.
-        </p>
-        <a href="curriculum.pdf" class="button" target='_blank'>Descargar CV</a>
-    </div>
-</section>
 
-<section id="contador">
-    <div>
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z">
-            </path>
-        </svg>
-        <h2>Programación Web</h2>
-        <div class="number">3</div>
-    </div>
-    <!-- <div>
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"></path>
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z">
-            </path>
-        </svg>
-        <h2>Android & iOS</h2>
-        <div class="number">-</div>
-    </div> -->
-    <div>
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z">
-            </path>
-        </svg>
-        <h2>Aplicaciones y Bots</h2>
-        <div class="number">1</div>
-    </div>
-</section>
+<main>
+  <section id="sobre-mi">
+    <h3>Sobre mí</h3>
+    <p>(Aquí irá tu biografía breve.)</p>
+  </section>
 
-<section id="projects">
-    <h1>Proyectos</h1>
-    <p style="margin-bottom: 32px;">
-        Entre los proyectos en los que he formado parte, se encuentran los siguientes.
-        Algunos de ellos son personales, mientras que otros son proyectos encargados
-        por clientes.
-    </p>
+  <section id="proyectos">
+    <h3>Proyectos</h3>
+    <p>(Galería o enlaces a proyectos destacados.)</p>
+  </section>
 
-    <!-- Filtrar proyectos -->
-    <!-- <div style="display: flex; justify-content: center;">
-        <a class="button" style="margin: 20px 8px;">iOS</a>
-        <a class="button" style="margin: 20px 8px;">Android</a>
-        <a class="button" style="margin: 20px 8px;">Web</a>
-        <a class="button" style="margin: 20px 8px;">Bot</a>
-    </div> -->
+  <section id="servicios">
+    <h3>Servicios</h3>
+    <p>(Qué ofreces: diseño, frontend, backend, consultoría, etc.)</p>
+  </section>
 
-    <div class="grid">
-        <div class="item">
-            <a href="https://www.novamadridtoastmasters.com/" target="_blank"></a>
-            <img src='img/Logo-Nova-Madrid-Toastmasters-letras-azul-contorno-blanco.png' alt='Icono Nova Madrid Toastmasters'>
-            <div class="item__overlay">
-                <div class="card_title" aria-hidden="true">
-                    <h2>Nova Madrid <br> Toastmasters</h2>
-                    <p class="small">2023</p>
-                </div>
-                <div class="item__body">
-                    <p>Diseño gráfico y desarrollo completo con WordPress de la web.</p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <a href="http://albertogg1.github.io/" target="_blank"></a>
-            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z">
-                </path>
-            </svg>
-            <div class="item__overlay">
-                <div class="card_title" aria-hidden="true">
-                    <h2>Portfolio</h2>
-                    <p class="small">2023</p>
-                </div>
-                <div class="item__body">
-                    <p>Diseño gráfico y desarrollo frontend de portfolio personal.</p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <a href="http://www.pomodorobot.infinityfreeapp.com" target="_blank"></a>
-            <img src='img/pomodoro.webp' alt='Icono Pomodoro'>
-            <div class="item__overlay">
-                <div class="card_title" aria-hidden="true">
-                    <h2>Pomodoro Web</h2>
-                    <p class="small">2022</p>
-                </div>
-                <div class="item__body">
-                    <p>Sitio web para acceder a las estadisticas generadas por el Pomodoro Bot.</p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <a href="https://github.com/carlosyalberto/Pomodoro-Bot" target="_blank"></a>
-            <img src='img/pomodoro.webp' alt='Icono Pomodoro'>
-            <div class="item__overlay">
-                <div class="card_title" aria-hidden="true">
-                    <h2>Pomodoro Bot</h2>
-                    <p class="small">2022</p>
-                </div>
-                <div class="item__body">
-                    <p>Bot de Discord que te ayudará en tus tareas de estudio.</p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <a href="https://www.juliacastrog.es" target="_blank"></a>
-            <img src='img/juliacastrog.png' alt='Icono Julia Castro'>
-            <div class="item__overlay">
-                <div class="card_title" aria-hidden="true">
-                    <h2>Julia Castro</h2>
-                    <p class="small">2022</p>
-                </div>
-                <div class="item__body">
-                    <p>Aplicación web para artista independiente. Diseño gráfico y desarrollo full-stack</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  <section id="blog">
+    <h3>Blog</h3>
+    <p>(Entradas y artículos.)</p>
+  </section>
 
-<section id="skills">
-    <div>
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z">
-            </path>
-        </svg>
-        <h2>Programación Web</h2>
-        <div class="skill_desc_group">
-            <div class="skill_desc">
-                <img src="img/HTML5.png" alt="icono HTML5">
-                <p>HTML</p>
-            </div>
-            <div class="skill_desc">
-                <img src="img/CSS3.png" alt="icono CSS3">
-                <p>CSS</p>
-            </div>
-            <div class="skill_desc">
-                <img src="img/JavaScript.png" alt="icono JavaScript">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill_desc">
-                <img src="img/PHP.png" alt="icono PHP">
-                <p>PHP</p>
-            </div>
-            <div class="skill_desc">
-                <img src="img/mysql.png" alt="icono SQL">
-                <p>SQL</p>
-            </div>
-        </div>
-    </div>
-    <!-- <div>
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"></path>
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z">
-            </path>
-        </svg>
-        <h2>Android & iOS</h2>
-        <p>
-            Kotlin <br>
-            Android Studio <br>
-        </p>
-    </div> -->
-    <div>
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z">
-            </path>
-        </svg>
-        <h2>Aplicaciones y Bots</h2>
-        <div class="skill_desc_group">
-            <div class="skill_desc">
-                <img src="img/java.svg" alt="icono Java">
-                <p>Java</p>
-            </div>
-            <div class="skill_desc">
-                <img src="img/python.svg" alt="icono Python">
-                <p>Python</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <h1>Contacto</h1>
-    <p>Si quieres ponerte en contacto conmigo puedes hacerlo a través de cualquiera de mis redes sociales.</p>
-    <div class="socials">
-        <a href="mailto:alberto.garc.garc@gmail.com?Subject=Página%20web%20albertogg1.github.io" target="_blank"
-            id="gmail"><i class="fa-solid fa-envelope"></i></a>
-        <label class="tooltip">Gmail</label>
-        <a href="https://github.com/albertogg1" target="_blank" id="github"><i class="fa-brands fa-github"></i></a>
-        <label class="tooltip">Github</label>
-        <a href="https://www.linkedin.com/in/alberto-garc%C3%ADa-garc%C3%ADa-637063173/" target="_blank"
-            id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-        <label class="tooltip">LinkedIn</label>
-    </div>
-</section>
+  <section id="contacto">
+    <h3>Contacto</h3>
+    <p>(Formulario o datos de contacto.)</p>
+  </section>
+</main>
 
 <footer>
-    &copy; 2022 - 2025 | Alberto García <!-- | &nbsp; <a href="">Política de privacidad</a> &nbsp; | &nbsp; <a
-        href="">Declaracion de accesibilidad </a> -->
+  © 2022 - <span id="year"></span> | Alberto García
 </footer>
-<!-- <p class="w3c-valid">
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;height:20px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="¡CSS Válido!" />
-    </a>
 
-</p> -->
 
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
 </html>
