@@ -81,7 +81,11 @@ header.shrink nav a {
   display: flex;
   align-items: center;
   gap: 14px;
+  max-width: 70%;
 }
+/* .name p{
+  max-width: 70px;
+} */
 .photo {
   width: 72px;
   height: 72px;
@@ -276,38 +280,34 @@ p { max-width: 700px; color: var(--muted); }
 
 #proyectos {
   background-color: var(--bg-color);
-	/* Stretch it out, so that we create room for the horizontal scroll animation */
-	height: 300vh;
-	overflow: visible; /* To make position sticky work … */
+  /* Stretch it out, so that we create room for the horizontal scroll animation */
+  /* height: 300vh; */ /* Para parallax */
+  overflow: visible; /* To make position sticky work … */
   display: flex;
-	view-timeline-name: --section-pin-tl;
-	view-timeline-axis: block;
+  justify-content: center;
 }
 
 .pin-wrap-sticky {
 	/* Stick to Top */
-	max-height: 100vh;
+	/* max-height: 100vh; */
 	position: sticky;
 	top: 0;
-
-	overflow-x: hidden;
+  
+	overflow: hidden;
 }
 
 .pin-wrap {
   display: flex;
+  flex-direction: column;
   gap: 52px;
   padding: 30px 120px;
 
   /* height: 70vh; */
-	width: max-content;
+	/* width: max-content; */
 
-	/* Hook animation */
-	will-change: transform;
-	animation: linear move forwards;
-
-	/* Link animation to view-timeline */
-	animation-timeline: --section-pin-tl;
-	animation-range: contain 0% contain 100%;
+  /* Hook animation */
+  /* will-change: transform;
+  animation: linear move forwards; */
 }
 
 .pin-wrap-title {
