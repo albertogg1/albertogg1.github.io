@@ -26,7 +26,12 @@
     </div>
   </div>
 
-  <button class="hamburger" id="menuBtn">☰</button>
+  <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="menu-overlay" id="menuOverlay"></div>
   <nav class="nav" id="navMenu">
     <a href="#inicio">Inicio</a>
     <a href="#sobre-mi">Sobre mí</a>
@@ -46,7 +51,11 @@
   <a href="https://wa.me/34684075019?text=Hola 👋🏽" target="_blank" class="btn animate__animated animate__fadeInUp">¿Hablamos?</a>
   
 
-  <img src="img/mouse.gif" alt="Scroll down" width="42px" class="scroll animate__animated animate__fadeInUp">
+  <div class="scroll-indicator" aria-label="Scroll down">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 </section>
 
 
@@ -202,8 +211,27 @@
   // Menú móvil
   const btn = document.getElementById('menuBtn');
   const nav = document.getElementById('navMenu');
-  btn.addEventListener('click', () => nav.classList.toggle('active'));
-  nav.addEventListener('click', () => nav.classList.remove('active'));
+  const overlay = document.getElementById('menuOverlay');
+  
+  function toggleMenu() {
+    nav.classList.toggle('active');
+    btn.classList.toggle('active');
+    if (overlay) overlay.classList.toggle('active');
+  }
+  
+  function closeMenu() {
+    nav.classList.remove('active');
+    btn.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
+  }
+  
+  btn.addEventListener('click', toggleMenu);
+  if (overlay) overlay.addEventListener('click', closeMenu);
+  nav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      closeMenu();
+    }
+  });
   
   // Animaciones de aparición
   const fadeEls = document.querySelectorAll('.fade-in');
