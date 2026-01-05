@@ -15,6 +15,50 @@ track.addEventListener("touchcancel", () => {
 }, { passive: true });
 
 
+// === THEME TOGGLE ===
+const themeToggle = document.getElementById("themeToggle");
+const html = document.documentElement;
+
+// Detectar preferencia del sistema
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+// Cargar tema guardado o usar preferencia del sistema
+function loadTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  
+  if (savedTheme) {
+    // Si hay un tema guardado, usarlo
+    html.setAttribute("data-theme", savedTheme);
+  } else if (prefersDark.matches) {
+    // Si no hay guardado pero el sistema prefiere oscuro, usar oscuro
+    html.setAttribute("data-theme", "dark");
+  } else {
+    // Si no hay guardado y sistema prefiere claro, usar claro
+    html.setAttribute("data-theme", "light");
+  }
+}
+
+// Alternar tema
+themeToggle.addEventListener("click", () => {
+  const currentTheme = html.getAttribute("data-theme") || "light";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+
+// Detectar cambios de preferencia del sistema
+prefersDark.addEventListener("change", (e) => {
+  if (!localStorage.getItem("theme")) {
+    const newTheme = e.matches ? "dark" : "light";
+    html.setAttribute("data-theme", newTheme);
+  }
+});
+
+// Cargar tema al iniciar
+loadTheme();
+
+
 const header = document.querySelector("header");
 const brand = document.querySelector(".brand");
 
