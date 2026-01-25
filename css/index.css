@@ -71,8 +71,7 @@
 #projectModal .modal-carousel img {
   max-width: 100%;
   max-height: 70vh;
-  border-radius: 0 0 0 18px;
-  object-fit: contain;
+  object-fit: cover;
   background: #fff;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
@@ -1056,11 +1055,25 @@ p {
   font-size: 28px;
 }
 
-.social-icon:hover {
-  background: var(--accent);
+.linkedin:hover {
+  background: #0e76a8;
   color: #ffffff;
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 122, 255, 0.2);
+  box-shadow: 0 12px 24px rgba(14, 118, 168, 0.2);
+}
+
+.github:hover {
+  background: #101411;
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(16, 20, 17, 0.2);
+}
+
+.gmail:hover {
+  background: #bb001b;
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(187, 0, 27, 0.2);
 }
 
 @media (max-width: 640px) {
