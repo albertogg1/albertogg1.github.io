@@ -1,3 +1,67 @@
+// === MAPEO DE TECNOLOGÍAS CON ICONOS ===
+const techIcons = {
+  'react': 'devicon-react-original colored',
+  'react.js': 'devicon-react-original colored',
+  'vue': 'devicon-vue-plain colored',
+  'vue.js': 'devicon-vue-plain colored',
+  'angular': 'devicon-angularjs-plain colored',
+  'svelte': 'devicon-svelte-plain colored',
+  'node.js': 'devicon-nodejs-plain colored',
+  'nodejs': 'devicon-nodejs-plain colored',
+  'node': 'devicon-nodejs-plain colored',
+  'express': 'devicon-express-original colored',
+  'python': 'devicon-python-plain colored',
+  'javascript': 'devicon-javascript-plain colored',
+  'js': 'devicon-javascript-plain colored',
+  'typescript': 'devicon-typescript-plain colored',
+  'ts': 'devicon-typescript-plain colored',
+  'html': 'devicon-html5-plain colored',
+  'html5': 'devicon-html5-plain colored',
+  'css': 'devicon-css3-plain colored',
+  'css3': 'devicon-css3-plain colored',
+  'php': 'devicon-php-plain colored',
+  'sql': 'devicon-mysql-plain colored',
+  'mysql': 'devicon-mysql-plain colored',
+  'postgresql': 'devicon-postgresql-plain colored',
+  'postgres': 'devicon-postgresql-plain colored',
+  'mongodb': 'devicon-mongodb-plain colored',
+  'firebase': 'devicon-firebase-plain colored',
+  'git': 'devicon-git-plain colored',
+  'github': 'devicon-github-original colored',
+  'gitlab': 'devicon-gitlab-plain colored',
+  'docker': 'devicon-docker-plain colored',
+  'kubernetes': 'devicon-kubernetes-plain colored',
+  'aws': 'devicon-amazonwebservices-plain colored',
+  'amazon web services': 'devicon-amazonwebservices-plain colored',
+  'azure': 'devicon-azure-plain colored',
+  'gcp': 'devicon-google-plain colored',
+  'google cloud': 'devicon-google-plain colored',
+  'terraform': 'devicon-terraform-plain colored',
+  'jenkins': 'devicon-jenkins-plain colored',
+  'vite': 'devicon-vite-plain colored',
+  'webpack': 'devicon-webpack-plain colored',
+  'wordpress': 'devicon-wordpress-plain colored',
+  'nextjs': 'devicon-nextjs-original colored',
+  'next.js': 'devicon-nextjs-original colored',
+  'nuxtjs': 'devicon-nuxtjs-plain colored',
+  'nuxt.js': 'devicon-nuxtjs-plain colored',
+  'gatsby': 'devicon-gatsby-plain colored',
+  'tailwind': 'devicon-tailwindcss-plain colored',
+  'bootstrap': 'devicon-bootstrap-plain colored',
+  'sass': 'devicon-sass-original colored',
+  'less': 'devicon-less-plain-wordmark colored',
+  'graphql': 'devicon-graphql-plain colored',
+  'redis': 'devicon-redis-plain colored',
+  'linux': 'devicon-linux-plain colored',
+  'unix': 'devicon-linux-plain colored'
+};
+
+// Función para obtener el icono de una tecnología
+function getTechIcon(tech) {
+  const normalized = tech.trim().toLowerCase();
+  return techIcons[normalized] || null;
+}
+
 // === POPUP MODAL PARA PROYECTOS ===
 document.addEventListener("DOMContentLoaded", function () {
   const projects = document.querySelectorAll('.project');
@@ -39,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const desc = card.getAttribute('data-desc');
       const tags = card.getAttribute('data-tags');
       const link = card.getAttribute('data-link');
-      const tagsArr = tags ? tags.split(',') : [];
+      const tagsArr = tags ? tags.split(',').map(t => t.trim()) : [];
       // Soporte para varias imágenes separadas por coma
       const imgArr = imgs.split(',').map(s => s.trim()).filter(Boolean);
       let carouselHtml = '';
@@ -61,7 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
           ${company ? `<div class="modal-company">${company}</div>` : ''}
           <div class="modal-desc">${desc}</div>
           <div class="modal-tags">
-            ${tagsArr.map(t => `<span class="tag">${t}</span>`).join(' ')}
+            ${tagsArr.map(t => {
+              const iconClass = getTechIcon(t);
+              return iconClass 
+                ? `<span class="tag"><i class="${iconClass}"></i> ${t}</span>`
+                : `<span class="tag">${t}</span>`;
+            }).join('')}
           </div>
           ${link ? `<a href="${link}" target="_blank" class="btn">Ver proyecto</a>` : ''}
         </div>

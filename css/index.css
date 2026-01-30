@@ -153,16 +153,25 @@
 }
 
 #projectModal .tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #e5e7eb;
   color: var(--muted);
   border-radius: 8px;
-  padding: 2px 10px;
+  padding: 4px 10px;
   font-size: 0.92em;
   margin-right: 6px;
   margin-bottom: 4px;
   font-weight: 500;
   border: 1px solid #e0e0e0;
+}
+
+#projectModal .tag i {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
@@ -1047,14 +1056,36 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  /* background: var(--card); */
-  color: var(--text);
   text-decoration: none;
   transition: var(--transition);
   box-shadow: var(--shadow-soft);
   font-size: 28px;
 }
 
+
+.gmail{
+  color: #101411;
+}
+.gmail:hover {
+  background: #bb001b;
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(187, 0, 27, 0.2);
+}
+
+.whatsapp{
+  color: #101411;
+}
+.whatsapp:hover {
+  background: #25d366;
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(37, 211, 102, 0.2);
+}
+
+.linkedin{
+  color: #101411;
+}
 .linkedin:hover {
   background: #0e76a8;
   color: #ffffff;
@@ -1062,6 +1093,9 @@ p {
   box-shadow: 0 12px 24px rgba(14, 118, 168, 0.2);
 }
 
+.github{
+  color: #101411;
+}
 .github:hover {
   background: #101411;
   color: #ffffff;
@@ -1069,12 +1103,7 @@ p {
   box-shadow: 0 12px 24px rgba(16, 20, 17, 0.2);
 }
 
-.gmail:hover {
-  background: #bb001b;
-  color: #ffffff;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(187, 0, 27, 0.2);
-}
+
 
 @media (max-width: 640px) {
   .social-links {
@@ -1201,6 +1230,19 @@ p {
   margin: 12px 0 8px 0;
   text-align: center;
 }
+
+.project .project-icons{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* .project .project-icons i {
+  background-color: rgb(255, 255, 255);
+  border-radius: .2em;
+  padding: 6px;
+} */
 
 .project .project-short {
   color: var(--muted);
