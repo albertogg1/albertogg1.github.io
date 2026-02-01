@@ -259,39 +259,6 @@
   --transition: all 0.4s ease;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1a1a;
-    --card: #2d2d2d;
-    --accent: #0a84ff;
-    /* Azul más brillante para dark mode */
-    --muted: #a0a0a0;
-    --text: #f5f5f5;
-    --border: rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* Clase para forzar dark mode */
-[data-theme="dark"] {
-  --bg: #1a1a1a;
-  --card: #2d2d2d;
-  --accent: #0a84ff;
-  --muted: #a0a0a0;
-  --text: #f5f5f5;
-  --border: rgba(255, 255, 255, 0.1);
-}
-
-/* Clase para forzar light mode */
-[data-theme="light"] {
-  --bg: #ffffff;
-  --card: #f9f9f9;
-  --accent: #007aff;
-  --muted: #4b5563;
-  --text: #111827;
-  --border: rgba(0, 0, 0, 0.05);
-}
-
 [id] {
   scroll-margin-top: 100px;
   /* Ajusta según la altura de tu cabecera */
@@ -349,14 +316,6 @@ header.shrink {
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid var(--border);
-}
-
-[data-theme="dark"] header.shrink {
-  background: rgba(26, 26, 26, 0.95);
-}
-
-[data-theme="dark"] header {
-  background: rgba(26, 26, 26, 0.8);
 }
 
 /* Si dentro tienes logo y navegación, también los suavizamos */
@@ -456,14 +415,6 @@ header.shrink .name p {
 
 header.shrink:hover {
   background: rgba(255, 255, 255, 0.98);
-}
-
-[data-theme="dark"] .header:hover {
-  background: rgba(26, 26, 26, 0.98);
-}
-
-[data-theme="dark"] header.shrink:hover {
-  background: rgba(26, 26, 26, 0.99);
 }
 
 .brand {
@@ -635,63 +586,6 @@ header.shrink:hover {
   width: 100%;
 }
 
-/* === THEME TOGGLE SWITCH === */
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 52px;
-  height: 28px;
-  border-radius: 14px;
-  background: #ccc;
-  position: relative;
-  transition: background 0.3s ease;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.theme-toggle::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: white;
-  left: 2px;
-  transition: left 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.theme-toggle::after {
-  content: "🌙";
-  position: absolute;
-  font-size: 13px;
-  left: 6px;
-  transition: opacity 0.3s ease;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.05);
-}
-
-[data-theme="dark"] .theme-toggle {
-  background: var(--accent);
-}
-
-[data-theme="dark"] .theme-toggle::before {
-  left: 26px;
-}
-
-[data-theme="dark"] .theme-toggle::after {
-  content: "☀️";
-  left: auto;
-  right: 6px;
-  opacity: 1;
-}
-
-
 /* === BOTONES === */
 .btn {
   background: var(--accent);
@@ -814,10 +708,6 @@ header.shrink:hover {
   visibility: visible;
 }
 
-[data-theme="dark"] .menu-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 @media (max-width: 800px) {
   header.header {
     flex-wrap: wrap;
@@ -844,10 +734,6 @@ header.shrink:hover {
     transform: translateX(100%);
     transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), visibility 0.3s ease;
     pointer-events: none;
-  }
-
-  [data-theme="dark"] nav.nav {
-    background-color: rgba(26, 26, 26, 0.99);
   }
 
   nav.nav.active {
@@ -906,11 +792,6 @@ header.shrink:hover {
     color: var(--accent);
     background-color: rgba(0, 122, 255, 0.05);
     transform: translateX(5px);
-  }
-
-  nav.nav .theme-toggle {
-    margin-left: 0;
-    margin-top: 16px;
   }
 
   .hamburger {
@@ -974,16 +855,6 @@ header.shrink:hover {
 
 .bg-alt4 {
   background: #f3f3f3;
-}
-
-[data-theme="dark"] .bg-alt1,
-[data-theme="dark"] .bg-alt3,
-[data-theme="dark"] .bg-alt4 {
-  background: #242424;
-}
-
-[data-theme="dark"] .bg-alt2 {
-  background: #1a1a1a;
 }
 
 /* === TEXTOS === */
