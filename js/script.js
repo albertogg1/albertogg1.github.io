@@ -230,19 +230,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const track = document.querySelector(".carousel-track");
 
-// Pausar al tocar (móviles)
-track.addEventListener("touchstart", () => {
-  track.classList.add("paused");
-}, { passive: true });
+if (track) {
+  // Pausar al tocar (móviles)
+  track.addEventListener("touchstart", () => {
+    track.classList.add("paused");
+  }, { passive: true });
 
-// Reanudar cuando se quita el dedo
-track.addEventListener("touchend", () => {
-  track.classList.remove("paused");
-}, { passive: true });
+  // Reanudar cuando se quita el dedo
+  track.addEventListener("touchend", () => {
+    track.classList.remove("paused");
+  }, { passive: true });
 
-track.addEventListener("touchcancel", () => {
-  track.classList.remove("paused");
-}, { passive: true });
+  track.addEventListener("touchcancel", () => {
+    track.classList.remove("paused");
+  }, { passive: true });
+}
 
 
 const header = document.querySelector("header");
@@ -341,5 +343,63 @@ if (scrollIndicator) {
   }
 }
 
+// === PARALLAX ENTRADA TIMELINE (EXPERIENCIA) ===
+(function () {
+  const items = document.querySelectorAll('.timeline-item');
+  if (!items.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('slide-in');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+  items.forEach((el, i) => {
+    el.style.setProperty('--ti-delay', `${i * 0.13}s`);
+    obs.observe(el);
+  });
+})();
 
+// === HERO TYPEWRITER (REPLACE EM TEXT WITH CYCLING WORDS) ===
+(function () {
+  const el = document.getElementById('typed-word');
+  if (!el) return;
+  const words = (el.dataset.words || '').split(',').map(w => w.trim()).filter(Boolean);
+  if (!words.length) return;
 
+  let wIdx = 0;
+  let chIdx = 0;
+  let typing = true;
+  const TYPING_SPEED = 70;
+  const DELETING_SPEED = 40;
+  const PAUSE_AFTER = 1100;
+
+  function tick() {
+    const word = words[wIdx];
+    if (typing) {
+      chIdx++;
+      el.textContent = word.slice(0, chIdx);
+      if (chIdx >= word.length) {
+        typing = false;
+        setTimeout(tick, PAUSE_AFTER);
+        return;
+      }
+      setTimeout(tick, TYPING_SPEED + Math.random() * 40);
+    } else {
+      chIdx--;
+      el.textContent = word.slice(0, chIdx);
+      if (chIdx <= 0) {
+        typing = true;
+        wIdx = (wIdx + 1) % words.length;
+        setTimeout(tick, 220);
+        return;
+      }
+      setTimeout(tick, DELETING_SPEED);
+    }
+  }
+
+  // kick off
+  el.textContent = '';
+  setTimeout(tick, 400);
+})();

@@ -4,7 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Alberto · DevOps & Cloud</title>
+  <title>Alberto García · Telecom & DevOps</title>
+  <meta name="description" content="Alberto García García — Ingeniero de Telecomunicación. Firmware embebido (C), automatización (Python), análisis de señal. Premio Extraordinario Fin de Carrera. Formándome en DevOps & Cloud. Inteligencia Artificial aplicada a sistemas embebidos., Docker, Kubernetes, Terraform, Jenkins, AWS, Azure.">
+  <meta name="author" content="Alberto García García">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alberto García · Ing. Telecomunicación & DevOps">
+  <meta property="og:description" content="Ingeniero de Telecomunicación. Firmware embebido, automatización Python. Premio Extraordinario Fin de Carrera.">
+  <meta property="og:image" content="img/alberto.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
   <link rel="icon" href="img/CommandLine.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="css/index.css">
@@ -20,11 +30,11 @@
   <header class="header">
     <div class="brand">
       <div class="photo logo">
-        <img src="img/alberto.jpg" alt="Foto de Alberto">
+        <img src="img/alberto.png" alt="Foto de Alberto">
       </div>
       <div class="name">
-        <h1>Alberto</h1>
-        <p>Desarrollo web · DevOps & Cloud</p>
+        <h1>Alberto García</h1>
+        <p>Ingeniero de Telecomunicación · DevOps & Cloud</p>
       </div>
     </div>
 
@@ -35,8 +45,10 @@
     </button>
     <div class="menu-overlay" id="menuOverlay"></div>
     <nav class="nav" id="navMenu">
-      <a href="#inicio">Inicio</a>
+      <!-- <a href="#inicio">Inicio</a> -->
       <a href="#sobre-mi">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#formacion">Formación</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#tecnologias">Tecnologías</a>
       <a href="#contacto">Contacto</a>
@@ -47,12 +59,13 @@
   <section class="section hero" id="inicio">
     <h2 class="animate__animated animate__fadeInDown">
       Hola, soy Alberto 👋🏽<br>
-      diseño <em>soluciones a tus problemas</em>.
+      construyo <em id="typed-word" data-words="tecnología,software,soluciones">tecnología</em>
     </h2>
-    <p class="animate__animated animate__fadeIn">Diseño y desarrollo soluciones digitales: páginas, apps y experiencias.
-    </p>
-    <a href="https://wa.me/34684075019?text=Hola 👋🏽" target="_blank"
-      class="btn animate__animated animate__fadeInUp">¿Hablamos?</a>
+    <p class="animate__animated animate__fadeIn">Ingeniero de Telecomunicación · Firmware embebido (C), automatización de pruebas (Python) · Formándome en DevOps &amp; Cloud.</p>
+    <div class="hero-ctas animate__animated animate__fadeInUp">
+      <a href="https://www.linkedin.com/in/alberto-garciagarcia" target="_blank" class="btn"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+      <a href="https://github.com/albertogg1" target="_blank" class="btn btn-outline"><i class="devicon-github-original"></i> GitHub</a>
+    </div>
 
 
     <div class="scroll-indicator" aria-label="Scroll down">
@@ -67,13 +80,119 @@
   <!-- Sobre mí -->
   <section id="sobre-mi" class="section fade-in bg-alt1">
     <h3>Sobre mí</h3>
-    <p>Soy un desarrollador apasionado por la tecnología, la automatización y las buenas prácticas en la nube. Me
-      encanta combinar diseño y funcionalidad para crear experiencias digitales efectivas.</p>
+    <div class="about-content">
+      <p>Ingeniero de Telecomunicación especializado en sistemas, con experiencia en <strong>desarrollo de software y sistemas embebidos</strong>. Experiencia en integración de sistemas electrónicos complejos, desarrollo de firmware en C y automatización de herramientas de validación en Python en entornos de ingeniería avanzada.</p>
+      <p>Actualmente trabajo en <strong>Indra</strong> en el área de sistemas de guerra electrónica, colaborando con equipos multidisciplinares de hardware, software y sistemas. En paralelo, he cursado el <strong>Programa Avanzado en DevOps &amp; Cloud</strong> (UNIR), aplicando Docker, Kubernetes, Terraform, Jenkins y Ansible en entornos cloud (AWS y Azure).</p>
+      <p>Busco entornos donde los problemas sean técnicamente exigentes, las buenas prácticas de ingeniería marquen la diferencia y haya margen real para seguir creciendo.</p>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia" class="section fade-in bg-alt2">
+    <h3>Experiencia</h3>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">sept 2024 — Actualidad</span>
+          <h4>Ingeniero de Sistemas de Radar <span class="timeline-company">· Indra</span></h4>
+          <p>Desarrollo e integración de sistemas de guerra electrónica. Desarrollo y depuración de firmware en C para sistemas embebidos. Automatización de herramientas de validación en Python. Simulación y análisis de señal con MATLAB. Instrumentación electrónica avanzada: osciloscopios, analizadores vectoriales y generadores de señal.</p>
+          <div class="timeline-tags">
+            <span class="tag"><i class="devicon-c-plain colored"></i> C</span>
+            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="tag"><i class="devicon-matlab-plain colored"></i> MATLAB</span>
+            <span class="tag">LabVIEW</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">feb 2024 — may 2024</span>
+          <h4>Investigador en prácticas <span class="timeline-company">· Grupo de Procesado en Array (GPA)</span></h4>
+          <p>Sistema de detección acústica basado en arrays de micrófonos MEMS. Adquisición de señales con LabVIEW, procesamiento con Python (NumPy, Pandas) y diseño de redes neuronales profundas con TensorFlow.</p>
+          <div class="timeline-tags">
+            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="tag"><i class="devicon-tensorflow-original colored"></i> TensorFlow</span>
+            <span class="tag">LabVIEW</span>
+            <span class="tag"><i class="devicon-python-plain colored"></i> NumPy / Pandas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">feb 2023 — jul 2023</span>
+          <h4>Monitor STEM <span class="timeline-company">· PLAY CODE ACADEMY</span></h4>
+          <p>Talleres de tecnología para alumnado de Primaria y Secundaria: programación web, Arduino, diseño e impresión 3D y programación con Scratch.</p>
+          <div class="timeline-tags">
+            <span class="tag"><i class="devicon-arduino-plain colored"></i> Arduino</span>
+            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML/CSS</span>
+            <span class="tag">Scratch</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">jun 2022 — ago 2022</span>
+          <h4>Desarrollador Web <span class="timeline-company">· Freelance</span></h4>
+          <p>Diseño y desarrollo full-stack del portfolio para la artista Julia Castro. Incluye panel de gestión de contenido.</p>
+          <div class="timeline-tags">
+            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tag"><i class="devicon-php-plain colored"></i> PHP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Formación y Certificaciones -->
+  <section id="formacion" class="section fade-in bg-alt1">
+    <h3>Formación</h3>
+
+    <div class="education-group">
+      <p class="education-group-label"><i class="fa-solid fa-graduation-cap"></i> Estudios</p>
+      <div class="education-grid">
+        <div class="education-card education-card--featured">
+          <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h4>Grado en Ingeniería de Tecnologías de Telecomunicación</h4>
+          <p class="education-place">Universidad de Valladolid · 2019 — 2024</p>
+<!--           <div class="education-badges">
+            <span class="education-badge">🏆 Premio Extraordinario Fin de Carrera</span>
+            <span class="education-badge">3 Matrículas de Honor · Media 7,14</span>
+          </div> -->
+        </div>
+        <div class="education-card">
+          <div class="education-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h4>Programa Avanzado en DevOps & Cloud</h4>
+          <p class="education-place">UNIR · oct 2025 — may 2026</p>
+          <p class="education-desc">Docker, Kubernetes, Terraform, Jenkins, Ansible, AWS, Azure.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="education-group education-group--compact">
+      <p class="education-group-label"><i class="fa-solid fa-certificate"></i> Certificaciones &amp; Idiomas</p>
+      <ul class="cert-list">
+        <li><i class="fa-solid fa-brain"></i> <strong>Fundamentals of Deep Learning</strong> · NVIDIA</li>
+        <li><i class="fa-solid fa-chart-line"></i> <strong>Fundamentals of Accelerated Data Science</strong> · NVIDIA RAPIDS</li>
+        <li><i class="fa-solid fa-language"></i> <strong>Inglés C1</strong> · EF SET 69/100</li>
+      </ul>
+    </div> -->
+
   </section>
 
   <!-- Proyectos -->
 
-  <section id="proyectos">
+  <section id="proyectos" class="fade-in">
     <div class="pin-wrap-sticky">
       <h3 class="pin-wrap-title">Proyectos</h3>
       <div class="pin-wrap">
@@ -166,19 +285,43 @@
   <section id="tecnologias" class="section fade-in bg-alt3">
     <h3>Tecnologías</h3>
 
-    <div class="tech-grid">
-      <div class="tech"> <i class="devicon-html5-plain colored"></i> HTML</div>
-      <div class="tech"> <i class="devicon-css3-plain colored"></i> CSS</div>
-      <div class="tech"> <i class="devicon-javascript-plain colored"></i> JavaScript</div>
-      <div class="tech"> <i class="devicon-react-original colored"></i> React</div>
-      <div class="tech"> <i class="devicon-nodejs-plain colored"></i> Node.js</div>
-      <div class="tech"> <i class="devicon-amazonwebservices-plain colored"></i> AWS</div>
-      <div class="tech"> <i class="devicon-docker-plain colored"></i> Docker</div>
-      <div class="tech"> <i class="devicon-python-plain colored"></i> Python</div>
-      <div class="tech"> <i class="devicon-jenkins-plain colored"></i> Jenkins</div>
-      <div class="tech"> <i class="devicon-terraform-plain colored"></i> Terraform</div>
-      <div class="tech"> <i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
-      <div class="tech"> <i class="devicon-git-plain colored"></i> Git</div>
+    <div class="tech-categories">
+      <div class="tech-category">
+        <h4><i class="fa-solid fa-microchip"></i> Sistemas & Embebido</h4>
+        <div class="tech-grid">
+          <div class="tech"><i class="devicon-c-plain colored"></i> C</div>
+          <div class="tech"><i class="devicon-python-plain colored"></i> Python</div>
+          <div class="tech"><i class="devicon-matlab-plain colored"></i> MATLAB</div>
+          <div class="tech"><i class="fa-solid fa-wave-square" style="color:#FFD700"></i> LabVIEW</div>
+          <div class="tech"><i class="devicon-tensorflow-original colored"></i> TensorFlow</div>
+          <div class="tech"><i class="devicon-git-plain colored"></i> Git</div>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h4><i class="fa-solid fa-cloud"></i> DevOps & Cloud</h4>
+        <div class="tech-grid">
+          <div class="tech"><i class="devicon-docker-plain colored"></i> Docker</div>
+          <div class="tech"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</div>
+          <div class="tech"><i class="devicon-terraform-plain colored"></i> Terraform</div>
+          <div class="tech"><i class="devicon-jenkins-plain colored"></i> Jenkins</div>
+          <div class="tech"><i class="devicon-amazonwebservices-plain colored"></i> AWS</div>
+          <div class="tech"><i class="devicon-azure-plain colored"></i> Azure</div>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h4><i class="fa-solid fa-code"></i> Desarrollo Web</h4>
+        <div class="tech-grid">
+          <div class="tech"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+          <div class="tech"><i class="devicon-react-original colored"></i> React</div>
+          <div class="tech"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+          <div class="tech"><i class="devicon-php-plain colored"></i> PHP</div>
+          <div class="tech"><i class="devicon-html5-plain colored"></i> HTML</div>
+          <div class="tech"><i class="devicon-css3-plain colored"></i> CSS</div>
+          <div class="tech"><i class="devicon-vite-plain colored"></i> Vite</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -187,13 +330,10 @@
   <!-- Contacto -->
   <section id="contacto" class="section fade-in bg-alt4">
     <h3>Contacto</h3>
-    <div class="social-links animate__animated animate__fadeInUp">
+    <p>¿Tienes una oportunidad o quieres saber más? Escríbeme.</p>
+    <div class="social-links">
       <a href="mailto:alberto.garc.garc@gmail.com" class="gmail social-icon" aria-label="Correo electrónico">
         <i class="fa-solid fa-envelope"></i>
-      </a>
-
-      <a href="https://wa.me/34684075019" class="whatsapp social-icon" aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
       </a>
 
       <a href="https://www.linkedin.com/in/alberto-garciagarcia" target="_blank" class="linkedin social-icon"
@@ -203,18 +343,7 @@
       <a href="https://github.com/albertogg1" target="_blank" class="github social-icon" aria-label="GitHub">
         <i class="devicon-github-original"></i>
       </a>
-
     </div>
-
-    <!--  
-    <form class="contact-form">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Correo" required>
-    <textarea rows="4" placeholder="Mensaje" required></textarea>
-    <button class="btn" type="submit">Enviar</button>
-  </form>
-  -->
-
   </section>
 
   <footer>
