@@ -265,6 +265,22 @@ window.addEventListener("scroll", () => {
   lastScroll = current;
 });
 
+// Mantener una variable CSS con la altura actual del header
+function updateHeaderHeight() {
+  if (!header) return;
+  const h = header.offsetHeight;
+  document.documentElement.style.setProperty('--header-height', h + 'px');
+}
+
+// Inicializar y actualizar en resize
+updateHeaderHeight();
+window.addEventListener('resize', updateHeaderHeight);
+
+// Actualizar tras cambios de scroll (cuando cambia la clase shrink)
+window.addEventListener('scroll', () => {
+  setTimeout(updateHeaderHeight, 60);
+}, { passive: true });
+
 
 // Indicador de scroll - solo aparece si el usuario pasa tiempo sin moverse
 const scrollIndicator = document.querySelector(".scroll-indicator");

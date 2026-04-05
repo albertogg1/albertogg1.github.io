@@ -262,13 +262,12 @@
 }
 
 [id] {
-  scroll-margin-top: 100px;
-  /* Ajusta según la altura de tu cabecera */
+  scroll-margin-top: var(--header-height, 100px);
 }
 
 @media (max-width: 900px) {
   [id] {
-    scroll-margin-top: 100px;
+    scroll-margin-top: var(--header-height, 90px);
   }
 }
 
